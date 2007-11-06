@@ -47,6 +47,7 @@ namespace SerialPortTerminal
         this.gbPortSettings = new System.Windows.Forms.GroupBox();
         this.gbMidi = new System.Windows.Forms.GroupBox();
         this.midiPortBox = new System.Windows.Forms.ComboBox();
+        this.label2 = new System.Windows.Forms.Label();
         this.gbMode.SuspendLayout();
         this.gbPortSettings.SuspendLayout();
         this.gbMidi.SuspendLayout();
@@ -59,7 +60,7 @@ namespace SerialPortTerminal
                     | System.Windows.Forms.AnchorStyles.Right)));
         this.rtfTerminal.Location = new System.Drawing.Point(12, 12);
         this.rtfTerminal.Name = "rtfTerminal";
-        this.rtfTerminal.Size = new System.Drawing.Size(249, 199);
+        this.rtfTerminal.Size = new System.Drawing.Size(249, 192);
         this.rtfTerminal.TabIndex = 0;
         this.rtfTerminal.Text = "";
         // 
@@ -124,9 +125,9 @@ namespace SerialPortTerminal
         this.gbMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
         this.gbMode.Controls.Add(this.rbText);
         this.gbMode.Controls.Add(this.rbHex);
-        this.gbMode.Location = new System.Drawing.Point(267, 163);
+        this.gbMode.Location = new System.Drawing.Point(267, 147);
         this.gbMode.Name = "gbMode";
-        this.gbMode.Size = new System.Drawing.Size(115, 48);
+        this.gbMode.Size = new System.Drawing.Size(115, 52);
         this.gbMode.TabIndex = 5;
         this.gbMode.TabStop = false;
         this.gbMode.Text = "Display";
@@ -218,7 +219,7 @@ namespace SerialPortTerminal
         // btnOpenPort
         // 
         this.btnOpenPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-        this.btnOpenPort.Location = new System.Drawing.Point(391, 176);
+        this.btnOpenPort.Location = new System.Drawing.Point(391, 160);
         this.btnOpenPort.Name = "btnOpenPort";
         this.btnOpenPort.Size = new System.Drawing.Size(234, 23);
         this.btnOpenPort.TabIndex = 6;
@@ -238,7 +239,7 @@ namespace SerialPortTerminal
         this.gbPortSettings.Controls.Add(this.cmbParity);
         this.gbPortSettings.Controls.Add(this.cmbDataBits);
         this.gbPortSettings.Controls.Add(this.label1);
-        this.gbPortSettings.Location = new System.Drawing.Point(267, 93);
+        this.gbPortSettings.Location = new System.Drawing.Point(267, 77);
         this.gbPortSettings.Name = "gbPortSettings";
         this.gbPortSettings.Size = new System.Drawing.Size(376, 64);
         this.gbPortSettings.TabIndex = 4;
@@ -263,11 +264,21 @@ namespace SerialPortTerminal
         this.midiPortBox.Size = new System.Drawing.Size(352, 21);
         this.midiPortBox.TabIndex = 0;
         // 
+        // label2
+        // 
+        this.label2.AutoSize = true;
+        this.label2.Location = new System.Drawing.Point(388, 186);
+        this.label2.Name = "label2";
+        this.label2.Size = new System.Drawing.Size(111, 13);
+        this.label2.TabIndex = 8;
+        this.label2.Text = "memeteam.net/c2midi";
+        // 
         // frmTerminal
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(644, 223);
+        this.ClientSize = new System.Drawing.Size(644, 216);
+        this.Controls.Add(this.label2);
         this.Controls.Add(this.gbMidi);
         this.Controls.Add(this.gbPortSettings);
         this.Controls.Add(this.btnOpenPort);
@@ -285,6 +296,7 @@ namespace SerialPortTerminal
         this.gbPortSettings.PerformLayout();
         this.gbMidi.ResumeLayout(false);
         this.ResumeLayout(false);
+        this.PerformLayout();
 
     }
 
@@ -308,6 +320,7 @@ namespace SerialPortTerminal
       private System.Windows.Forms.GroupBox gbPortSettings;
       private System.Windows.Forms.GroupBox gbMidi;
       private System.Windows.Forms.ComboBox midiPortBox;
+      private System.Windows.Forms.Label label2;
   }
 }
 
