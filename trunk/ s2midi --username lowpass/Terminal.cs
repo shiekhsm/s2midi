@@ -148,17 +148,18 @@ namespace SerialPortTerminal
             MessageBox.Show(this, "No MIDI output ports detected.", "No MIDI ports", MessageBoxButtons.OK, MessageBoxIcon.Error);
             this.Close();
         }
+
         MidiOutCaps caps = new MidiOutCaps();
         for (int c = 0; c < midiOutGetNumDevs(); c++)
         {
             int result = midiOutGetDevCaps(c, ref caps, Marshal.SizeOf(caps));
             midiPortBox.Items.Add(caps.name);
         }
-
         if (midiPortBox.Items.Contains(Settings.Default.midiPort))
             midiPortBox.Text = Settings.Default.midiPort;
         else
             midiPortBox.SelectedIndex = 0;
+
 // Serial Setup
       cmbParity.Items.Clear(); cmbParity.Items.AddRange(Enum.GetNames(typeof(Parity)));
       cmbStopBits.Items.Clear(); cmbStopBits.Items.AddRange(Enum.GetNames(typeof(StopBits)));
@@ -332,14 +333,14 @@ namespace SerialPortTerminal
                     byteOne -= 0x90;
                     MidiPlayer.Play(new NoteOn(1, byteOne, byteTwo, byteThree));
                     if (CurrentDataMode == DataMode.Text)
-                        Log(LogMsgType.Normal, String.Format("Channel: {1} Note: {0} Velocity: {2}", MidiEvent.GetNoteName(byteTwo), byteOne, byteThree));                   
+                        Log(LogMsgType.Normal, String.Format("Channel: {1} Note: {0} Velocity: {2}", MidiEvent.GetNoteName(byteTwo), byteOne+1, byteThree));                   
                 }
                 else if (byteOne >= 0xB0 && byteOne <= 0xBF)
                 {
                     byteOne -= 0xB0;
                     MidiPlayer.Play(new Controller(0, byteOne, byteTwo, byteThree));
                     if (CurrentDataMode == DataMode.Text)
-                        Log(LogMsgType.Normal, String.Format("Channel: {0} CC: {1} Value: {2}", byteOne, byteTwo, byteThree));
+                        Log(LogMsgType.Normal, String.Format("Channel: {0} CC: {1} Value: {2}", byteOne+1, byteTwo, byteThree));
                 }
             }
         }   
