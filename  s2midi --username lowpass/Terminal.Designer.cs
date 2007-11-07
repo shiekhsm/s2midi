@@ -55,9 +55,6 @@ namespace SerialPortTerminal
         // 
         // rtfTerminal
         // 
-        this.rtfTerminal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                    | System.Windows.Forms.AnchorStyles.Left)
-                    | System.Windows.Forms.AnchorStyles.Right)));
         this.rtfTerminal.Location = new System.Drawing.Point(12, 12);
         this.rtfTerminal.Name = "rtfTerminal";
         this.rtfTerminal.Size = new System.Drawing.Size(249, 192);
@@ -122,7 +119,7 @@ namespace SerialPortTerminal
         // 
         // gbMode
         // 
-        this.gbMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+        this.gbMode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
         this.gbMode.Controls.Add(this.rbText);
         this.gbMode.Controls.Add(this.rbHex);
         this.gbMode.Location = new System.Drawing.Point(267, 147);
@@ -218,7 +215,7 @@ namespace SerialPortTerminal
         // 
         // btnOpenPort
         // 
-        this.btnOpenPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+        this.btnOpenPort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
         this.btnOpenPort.Location = new System.Drawing.Point(391, 160);
         this.btnOpenPort.Name = "btnOpenPort";
         this.btnOpenPort.Size = new System.Drawing.Size(234, 23);
@@ -228,7 +225,7 @@ namespace SerialPortTerminal
         // 
         // gbPortSettings
         // 
-        this.gbPortSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+        this.gbPortSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
         this.gbPortSettings.Controls.Add(this.lblComPort);
         this.gbPortSettings.Controls.Add(this.cmbPortName);
         this.gbPortSettings.Controls.Add(this.lblStopBits);
@@ -248,6 +245,7 @@ namespace SerialPortTerminal
         // 
         // gbMidi
         // 
+        this.gbMidi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
         this.gbMidi.Controls.Add(this.midiPortBox);
         this.gbMidi.Location = new System.Drawing.Point(267, 12);
         this.gbMidi.Name = "gbMidi";
@@ -266,6 +264,7 @@ namespace SerialPortTerminal
         // 
         // label2
         // 
+        this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
         this.label2.AutoSize = true;
         this.label2.Location = new System.Drawing.Point(388, 186);
         this.label2.Name = "label2";
@@ -277,7 +276,7 @@ namespace SerialPortTerminal
         // 
         this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
         this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-        this.ClientSize = new System.Drawing.Size(644, 216);
+        this.ClientSize = new System.Drawing.Size(649, 211);
         this.Controls.Add(this.label2);
         this.Controls.Add(this.gbMidi);
         this.Controls.Add(this.gbPortSettings);
@@ -285,7 +284,8 @@ namespace SerialPortTerminal
         this.Controls.Add(this.gbMode);
         this.Controls.Add(this.rtfTerminal);
         this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-        this.MinimumSize = new System.Drawing.Size(559, 150);
+        this.MaximumSize = new System.Drawing.Size(657, 238);
+        this.MinimumSize = new System.Drawing.Size(657, 238);
         this.Name = "frmTerminal";
         this.Text = "S2MIDI";
         this.Shown += new System.EventHandler(this.frmTerminal_Shown);
