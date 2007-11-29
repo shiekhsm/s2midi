@@ -23,7 +23,7 @@ namespace SerialPortTerminal
   public partial class frmTerminal : Form
   {
     #region Local Variables
-      static string Version = "1.0";
+      static string Version = "1.01";
 
     // Not covered by the MIDIPlayer library
       [DllImport("winmm.dll")]
