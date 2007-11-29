@@ -241,7 +241,7 @@ namespace SerialPortTerminal
         this.gbPortSettings.Size = new System.Drawing.Size(376, 64);
         this.gbPortSettings.TabIndex = 4;
         this.gbPortSettings.TabStop = false;
-        this.gbPortSettings.Text = "Serial Port &Settings";
+        this.gbPortSettings.Text = "Serial &Input Port Settings";
         // 
         // gbMidi
         // 
@@ -252,7 +252,7 @@ namespace SerialPortTerminal
         this.gbMidi.Size = new System.Drawing.Size(376, 59);
         this.gbMidi.TabIndex = 7;
         this.gbMidi.TabStop = false;
-        this.gbMidi.Text = "MIDI In Port";
+        this.gbMidi.Text = "MIDI &Output Port";
         // 
         // midiPortBox
         // 
