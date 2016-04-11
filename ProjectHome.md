@@ -1,0 +1,1 @@
+This windows program attempts to read raw MIDI data coming in on a serial port and send it to an internal MIDI driver. We wrote it to get MIDI from the Arduino physical computing platform into Windows based music software without the grief of strange unsupported closed source drivers. In theory it can be used for all kinds of things but your mileage will vary.
